@@ -1,0 +1,16 @@
+:root {
+  --primary-color: #0f172a;
+  --accent-color: #22c55e;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  color: #0f172a;
+  background: #ffffff;
+}
+
+/* Smooth anchor scroll behavior as a progressive enhancement */
+html {
+  scroll-behavior: smooth;
+}
