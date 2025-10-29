@@ -1,0 +1,294 @@
+<!-- home.component.html -->
+<div style="font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial; color:#0f172a; line-height:1.6;">
+  <!-- Top bar (exactly 100px tall) -->
+  <div color="primary" style="background:linear-gradient(90deg,#0f172a,#1e293b); color:#f8fafc; padding:0 24px; height:100px; display:flex; align-items:center; justify-content:space-between;">
+    <div style="display:flex; align-items:center; gap:24px;">
+      <span style="font-weight:800; letter-spacing:0.4px; font-size:18px;">KOYO</span>
+      <nav style="display:flex; gap:18px; align-items:center; font-size:14px;">
+        <a href="#hero" (click)="$event.preventDefault(); scrollTo('hero')" style="text-decoration:none; color:#e2e8f0; font-weight:500;">Hero</a>
+        <a href="#about" (click)="$event.preventDefault(); scrollTo('about')" style="text-decoration:none; color:#e2e8f0; font-weight:500;">About KOYO</a>
+        <a href="#features" (click)="$event.preventDefault(); scrollTo('features')" style="text-decoration:none; color:#e2e8f0; font-weight:500;">Features</a>
+        <a href="#why" (click)="$event.preventDefault(); scrollTo('why')" style="text-decoration:none; color:#e2e8f0; font-weight:500;">Why KOYO</a>
+        <a href="#useCases" (click)="$event.preventDefault(); scrollTo('useCases')" style="text-decoration:none; color:#e2e8f0; font-weight:500;">Use Cases</a>
+        <a href="#plans" (click)="$event.preventDefault(); scrollTo('plans')" style="text-decoration:none; color:#e2e8f0; font-weight:500;">Models & Pricing</a>
+        <a href="#testimonials" (click)="$event.preventDefault(); scrollTo('testimonials')" style="text-decoration:none; color:#e2e8f0; font-weight:500;">Testimonials</a>
+        <a href="#faq" (click)="$event.preventDefault(); scrollTo('faq')" style="text-decoration:none; color:#e2e8f0; font-weight:500;">FAQ</a>
+      </nav>
+    </div>
+    <div style="display:flex; gap:12px; align-items:center;">
+      <button mat-stroked-button style="border-color:#94a3b8; color:#e2e8f0;">Support</button>
+      <button mat-raised-button color="accent" style="background:#22c55e; color:#0b1a0f; font-weight:700;">Buy KOYO</button>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section id="hero" style="background:linear-gradient(180deg,#f1f5f9, #ffffff); padding:56px 16px;">
+    <mat-card style="max-width:1100px; margin:0 auto; padding:32px; border-radius:16px; box-shadow:0 10px 30px rgba(2,6,23,0.08);">
+      <div style="display:flex; flex-wrap:wrap; gap:24px; align-items:center; justify-content:space-between;">
+        <div style="flex:1 1 460px;">
+          <h1 style="margin:0 0 12px 0; font-size:40px; line-height:1.2; color:#0f172a;">Powerfully simple smartphones that just work</h1>
+          <p style="margin:0 0 16px 0; font-size:16px; color:#334155;">KOYO pairs flagship cameras, long-lasting battery, and clean Android for a phone you can trust every day.</p>
+          <ul style="margin:0 0 20px 16px; color:#334155;">
+            <li>50MP main sensor with OIS + ultra‑wide for detail-rich photos</li>
+            <li>5200 mAh battery with 65W fast charging—go from 0–70% in 30 minutes</li>
+            <li>Vivid 120Hz AMOLED, toughened with Corning Gorilla Glass</li>
+          </ul>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <button mat-raised-button color="primary" (click)="scrollTo('plans')" style="background:#0f172a; color:#f8fafc; padding:0 20px; height:44px; border-radius:8px; font-weight:700;">Explore Models</button>
+            <button mat-stroked-button (click)="scrollTo('features')" style="height:44px; border-radius:8px; border-color:#cbd5e1; color:#0f172a;">See Camera Samples</button>
+          </div>
+          <p style="margin:12px 0 0 0; font-size:12px; color:#64748b;">Free shipping, 15‑day returns, 2‑year limited warranty.</p>
+        </div>
+      </div>
+    </mat-card>
+  </section>
+
+  <!-- About -->
+  <section id="about" style="padding:40px 16px; background:#ffffff;">
+    <div style="max-width:1100px; margin:0 auto; display:flex; flex-direction:column; gap:16px;">
+      <h2 style="margin:0; font-size:28px; color:#0f172a;">About KOYO</h2>
+      <p style="margin:0; color:#334155; font-weight:600;">Designed for real life—no bloat, no gimmicks.</p>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px;">
+        <mat-card style="border-radius:12px; padding:18px; border:1px solid #e2e8f0;">
+          <p style="margin:0; color:#334155;">KOYO is a new smartphone brand built by a team of engineers and designers who believe great technology should be effortless. We focus on the essentials: cameras that capture your moments, batteries that last, and software that stays fast.</p>
+        </mat-card>
+        <mat-card style="border-radius:12px; padding:18px; border:1px solid #e2e8f0;">
+          <p style="margin:0; color:#334155;">By selling directly and keeping our lineup simple, we deliver flagship‑level performance at prices that make sense. Every KOYO runs clean Android with helpful additions—not preloaded apps you didn't ask for.</p>
+        </mat-card>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; gap:12px; align-items:center;">
+        <span style="background:#0f172a; color:#f8fafc; padding:6px 10px; border-radius:999px; font-size:12px;">2‑year limited warranty</span>
+        <span style="background:#0f172a; color:#f8fafc; padding:6px 10px; border-radius:999px; font-size:12px;">3 years OS updates</span>
+        <span style="background:#0f172a; color:#f8fafc; padding:6px 10px; border-radius:999px; font-size:12px;">4 years security updates</span>
+      </div>
+      <p style="margin:0; color:#64748b; font-size:12px;">Service and parts are available through authorized centers and mail‑in support.</p>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" style="padding:48px 16px; background:#ffffff;">
+    <div style="max-width:1100px; margin:0 auto;">
+      <h2 style="margin:0 0 8px 0; font-size:28px; color:#0f172a;">Features You'll Feel Every Day</h2>
+      <p style="margin:0 0 20px 0; color:#475569;">Clean Android 15 experience, dual 5G SIM (eSIM + nano), Wi‑Fi 7, Bluetooth 5.3, NFC for contactless payments, and IP68 dust/water resistance vary by model.</p>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px;">
+        <mat-card class="feature-card" style="border-radius:12px; padding:20px; border:1px solid #e2e8f0;">
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+            <mat-icon>photo_camera</mat-icon>
+            <span style="font-weight:700; color:#0f172a;">Pro Camera System</span>
+          </div>
+          <div style="color:#334155;">50MP main with OIS plus ultra‑wide capture sharp, stable photos and 4K HDR video—day or night.</div>
+        </mat-card>
+        <mat-card class="feature-card" style="border-radius:12px; padding:20px; border:1px solid #e2e8f0;">
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+            <mat-icon>battery_charging_full</mat-icon>
+            <span style="font-weight:700; color:#0f172a;">2‑Day Battery + 65W Fast Charge</span>
+          </div>
+          <div style="color:#334155;">5200 mAh cell gets you through busy weekends; a quick 15‑minute top‑up keeps you moving.</div>
+        </mat-card>
+        <mat-card class="feature-card" style="border-radius:12px; padding:20px; border:1px solid #e2e8f0;">
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+            <mat-icon>phone_android</mat-icon>
+            <span style="font-weight:700; color:#0f172a;">120Hz AMOLED Display</span>
+          </div>
+          <div style="color:#334155;">Silky scrolling and punchy colors on a bright panel protected by Corning Gorilla Glass.</div>
+        </mat-card>
+        <mat-card class="feature-card" style="border-radius:12px; padding:20px; border:1px solid #e2e8f0;">
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+            <mat-icon>bolt</mat-icon>
+            <span style="font-weight:700; color:#0f172a;">Flagship‑Class Performance</span>
+          </div>
+          <div style="color:#334155;">Advanced 4nm processor with vapor‑chamber cooling keeps games smooth and apps responsive.</div>
+        </mat-card>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why KOYO -->
+  <section id="why" style="padding:48px 16px; background:#f8fafc;">
+    <div style="max-width:1100px; margin:0 auto;">
+      <h2 style="margin:0 0 8px 0; font-size:28px; color:#0f172a;">Why KOYO</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px;">
+        <mat-card class="feature-card" style="border-radius:12px; padding:18px; border:1px solid #e2e8f0;">
+          <div style="font-weight:700; color:#0f172a; margin-bottom:6px;">Honest by design</div>
+          <div style="color:#334155;">Direct pricing and a focused lineup mean you pay for performance, not hype.</div>
+        </mat-card>
+        <mat-card class="feature-card" style="border-radius:12px; padding:18px; border:1px solid #e2e8f0;">
+          <div style="font-weight:700; color:#0f172a; margin-bottom:6px;">Updates that matter</div>
+          <div style="color:#334155;">Guaranteed OS and security updates keep your phone fast and protected for years.</div>
+        </mat-card>
+        <mat-card class="feature-card" style="border-radius:12px; padding:18px; border:1px solid #e2e8f0;">
+          <div style="font-weight:700; color:#0f172a; margin-bottom:6px;">Reliable support</div>
+          <div style="color:#334155;">Simple warranty, authorized service centers, and fast replacements minimize downtime.</div>
+        </mat-card>
+        <mat-card class="feature-card" style="border-radius:12px; padding:18px; border:1px solid #e2e8f0;">
+          <div style="font-weight:700; color:#0f172a; margin-bottom:6px;">Built to last</div>
+          <div style="color:#334155;">Durable materials, water resistance, and replaceable parts extend your phone's lifespan.</div>
+        </mat-card>
+      </div>
+      <p style="margin-top:12px; color:#64748b; font-size:12px;">Independent camera labs validate low‑light performance and color accuracy across the lineup.</p>
+    </div>
+  </section>
+
+  <!-- Use Cases -->
+  <section id="useCases" style="padding:48px 16px; background:#ffffff;">
+    <div style="max-width:1100px; margin:0 auto;">
+      <h2 style="margin:0 0 8px 0; font-size:28px; color:#0f172a;">Made for How You Live</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px;">
+        <mat-card class="feature-card" style="border-radius:12px; padding:18px; border:1px solid #e2e8f0;">
+          <div style="font-weight:700; color:#0f172a; margin-bottom:6px;">Creators</div>
+          <div style="color:#334155;">4K HDR video, stable OIS, and rich color profiles—shareable content without extra gear.</div>
+        </mat-card>
+        <mat-card class="feature-card" style="border-radius:12px; padding:18px; border:1px solid #e2e8f0;">
+          <div style="font-weight:700; color:#0f172a; margin-bottom:6px;">Gamers</div>
+          <div style="color:#334155;">120Hz display, fast GPU, and smart cooling for smooth sessions without throttling.</div>
+        </mat-card>
+        <mat-card class="feature-card" style="border-radius:12px; padding:18px; border:1px solid #e2e8f0;">
+          <div style="font-weight:700; color:#0f172a; margin-bottom:6px;">Everyday</div>
+          <div style="color:#334155;">All‑day battery, quick charge, and clean Android for calls, maps, and chats that never lag.</div>
+        </mat-card>
+        <mat-card class="feature-card" style="border-radius:12px; padding:18px; border:1px solid #e2e8f0;">
+          <div style="font-weight:700; color:#0f172a; margin-bottom:6px;">Work</div>
+          <div style="color:#334155;">eSIM + physical SIM, secure updates, and NFC for tap‑to‑pay and building access.</div>
+        </mat-card>
+      </div>
+    </div>
+  </section>
+
+  <!-- Models & Pricing -->
+  <section id="plans" style="padding:48px 16px; background:#f8fafc;">
+    <div style="max-width:1100px; margin:0 auto;">
+      <h2 style="margin:0 0 8px 0; font-size:28px; color:#0f172a;">Models & Pricing</h2>
+      <p style="margin:0 0 24px 0; color:#475569;">Choose the model that fits your life. Transparent pricing, no gimmicks.</p>
+
+      <div style="display:flex; flex-wrap:wrap; gap:16px;">
+        <!-- KOYO Lite -->
+        <mat-card style="flex:1 1 300px; min-width:280px; border:1px solid #e2e8f0; border-radius:14px; padding:20px; background:#ffffff;">
+          <mat-card-title style="font-size:18px; color:#0f172a;">KOYO Lite</mat-card-title>
+          <div style="margin:6px 0 14px 0; font-size:24px; color:#0f172a;">From $399</div>
+          <ul style="padding-left:18px; margin:0 0 16px 0; color:#334155;">
+            <li>6.1" 120Hz AMOLED, Gorilla Glass</li>
+            <li>50MP main + 8MP ultra‑wide</li>
+            <li>4500 mAh battery, 30W fast charge</li>
+          </ul>
+          <button mat-stroked-button style="width:100%; border-color:#cbd5e1; color:#0f172a; height:42px;">Buy KOYO Lite</button>
+        </mat-card>
+
+        <!-- KOYO Pro (featured) -->
+        <mat-card style="flex:1 1 300px; min-width:280px; border:2px solid #0f172a; border-radius:16px; padding:22px; background:#0f172a; color:#f8fafc; transform:translateY(-4px); box-shadow:0 12px 30px rgba(2,6,23,0.15);">
+          <mat-card-title style="font-size:18px; color:#f8fafc;">KOYO Pro</mat-card-title>
+          <div style="margin:6px 0 14px 0; font-size:24px; color:#f8fafc;">From $599</div>
+          <ul style="padding-left:18px; margin:0 0 16px 0; color:#e2e8f0;">
+            <li>6.5" 120Hz AMOLED, HDR10+</li>
+            <li>50MP OIS main + 12MP ultra‑wide, 4K HDR video</li>
+            <li>5200 mAh, 65W fast charge, vapor‑chamber cooling</li>
+          </ul>
+          <button mat-raised-button color="accent" style="width:100%; height:44px; background:#22c55e; color:#0b1a0f; font-weight:800;">Buy KOYO Pro</button>
+        </mat-card>
+
+        <!-- KOYO Ultra -->
+        <mat-card style="flex:1 1 300px; min-width:280px; border:1px solid #e2e8f0; border-radius:14px; padding:20px; background:#ffffff;">
+          <mat-card-title style="font-size:18px; color:#0f172a;">KOYO Ultra</mat-card-title>
+          <div style="margin:6px 0 14px 0; font-size:24px; color:#0f172a;">From $799</div>
+          <ul style="padding-left:18px; margin:0 0 16px 0; color:#334155;">
+            <li>6.7" 120Hz AMOLED, peak brightness for outdoor use</li>
+            <li>50MP OIS main + 12MP ultra‑wide + 10MP 3× telephoto</li>
+            <li>5200 mAh, 65W fast + 30W wireless, IP68</li>
+          </ul>
+          <button mat-stroked-button style="width:100%; border-color:#cbd5e1; color:#0f172a; height:42px;">Buy KOYO Ultra</button>
+        </mat-card>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" style="padding:48px 16px; background:#ffffff;">
+    <div style="max-width:1100px; margin:0 auto;">
+      <h2 style="margin:0 0 8px 0; font-size:28px; color:#0f172a;">What People Are Saying</h2>
+      <div style="display:flex; flex-wrap:wrap; gap:16px;">
+        <mat-card style="flex:1 1 320px; min-width:280px; border:1px solid #e2e8f0; border-radius:12px; padding:18px;">
+          <p style="margin:0 0 4px 0; color:#0f172a; font-weight:700;">Maya Chen • Mobile Filmmaker</p>
+          <p style="margin:0; color:#334155;">“KOYO's stabilization and color consistency mean I can shoot client reels without lugging a gimbal.”</p>
+        </mat-card>
+        <mat-card style="flex:1 1 320px; min-width:280px; border:1px solid #e2e8f0; border-radius:12px; padding:18px;">
+          <p style="margin:0 0 4px 0; color:#0f172a; font-weight:700;">Jordan Patel • Tech Reviewer, The Gadget Grid</p>
+          <p style="margin:0; color:#334155;">“Battery life is standout and the software is refreshingly clean—this is the mid‑range phone to beat.”</p>
+        </mat-card>
+        <mat-card style="flex:1 1 320px; min-width:280px; border:1px solid #e2e8f0; border-radius:12px; padding:18px;">
+          <p style="margin:0 0 4px 0; color:#0f172a; font-weight:700;">Sofia Alvarez • Startup Product Lead</p>
+          <p style="margin:0; color:#334155;">“Dual SIM, fast updates, and reliable support made switching our team to KOYO a no‑brainer.”</p>
+        </mat-card>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" style="padding:48px 16px; background:#f8fafc;">
+    <div style="max-width:1100px; margin:0 auto;">
+      <h2 style="margin:0 0 8px 0; font-size:28px; color:#0f172a;">Frequently Asked Questions</h2>
+      <mat-card style="border-radius:12px; padding:0; border:1px solid #e2e8f0; overflow:hidden;">
+        <div style="padding:16px;">
+          <p style="margin:0; font-weight:600; color:#0f172a;">Which accessories are included?</p>
+          <p style="margin:6px 0 0 0; color:#334155;">Every KOYO includes a USB‑C cable, SIM tool, and protective case. Chargers are available separately to reduce e‑waste.</p>
+        </div>
+        <mat-divider></mat-divider>
+        <div style="padding:16px;">
+          <p style="margin:0; font-weight:600; color:#0f172a;">How long will my phone receive updates?</p>
+          <p style="margin:6px 0 0 0; color:#334155;">KOYO guarantees 3 years of Android OS upgrades and 4 years of monthly security updates from the launch of your model.</p>
+        </div>
+        <mat-divider></mat-divider>
+        <div style="padding:16px;">
+          <p style="margin:0; font-weight:600; color:#0f172a;">Is KOYO compatible with my carrier?</p>
+          <p style="margin:6px 0 0 0; color:#334155;">KOYO models support major global 5G and 4G LTE bands. Check the model page for band details and carrier certification in your country.</p>
+        </div>
+        <mat-divider></mat-divider>
+        <div style="padding:16px;">
+          <p style="margin:0; font-weight:600; color:#0f172a;">What is the warranty?</p>
+          <p style="margin:6px 0 0 0; color:#334155;">A 2‑year limited warranty covers manufacturing defects. Extended coverage and accidental damage protection are available at checkout.</p>
+        </div>
+        <mat-divider></mat-divider>
+        <div style="padding:16px;">
+          <p style="margin:0; font-weight:600; color:#0f172a;">Do you support eSIM?</p>
+          <p style="margin:6px 0 0 0; color:#334155;">Yes. All current models support eSIM and one physical nano‑SIM for flexible dual‑line setups.</p>
+        </div>
+        <mat-divider></mat-divider>
+        <div style="padding:16px;">
+          <p style="margin:0; font-weight:600; color:#0f172a;">What is your return policy?</p>
+          <p style="margin:6px 0 0 0; color:#334155;">You can return your phone within 15 days in original condition for a full refund. We provide a prepaid return label in supported regions.</p>
+        </div>
+      </mat-card>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background:#0f172a; color:#e2e8f0;">
+    <div style="max-width:1100px; margin:0 auto; padding:28px 16px; display:flex; flex-wrap:wrap; gap:24px; align-items:flex-start; justify-content:space-between;">
+      <div style="min-width:240px;">
+        <div style="font-weight:800; margin-bottom:6px;">KOYO</div>
+        <div style="font-size:13px; color:#94a3b8;">KOYO builds reliable, high‑performance Android phones with a focus on longevity, clean software, and honest pricing.</div>
+      </div>
+      <div style="display:flex; gap:32px; flex-wrap:wrap;">
+        <div>
+          <div style="font-weight:700; margin-bottom:8px; color:#f1f5f9;">Product</div>
+          <a href="#features" (click)="$event.preventDefault(); scrollTo('features')" style="display:block; text-decoration:none; color:#cbd5e1; margin-bottom:6px;">Features</a>
+          <a href="#plans" (click)="$event.preventDefault(); scrollTo('plans')" style="display:block; text-decoration:none; color:#cbd5e1; margin-bottom:6px;">Pricing/Plans</a>
+          <a href="#faq" (click)="$event.preventDefault(); scrollTo('faq')" style="display:block; text-decoration:none; color:#cbd5e1;">Docs</a>
+        </div>
+        <div>
+          <div style="font-weight:700; margin-bottom:8px; color:#f1f5f9;">Company</div>
+          <a href="#about" (click)="$event.preventDefault(); scrollTo('about')" style="display:block; text-decoration:none; color:#cbd5e1; margin-bottom:6px;">About</a>
+          <a href="#" style="display:block; text-decoration:none; color:#cbd5e1; margin-bottom:6px;">Careers</a>
+          <a href="#" style="display:block; text-decoration:none; color:#cbd5e1;">Contact</a>
+        </div>
+        <div>
+          <div style="font-weight:700; margin-bottom:8px; color:#f1f5f9;">Legal</div>
+          <a href="#" style="display:block; text-decoration:none; color:#cbd5e1; margin-bottom:6px;">Privacy</a>
+          <a href="#" style="display:block; text-decoration:none; color:#cbd5e1;">Terms</a>
+        </div>
+      </div>
+    </div>
+    <mat-divider style="border-top-color:#1f2937;"></mat-divider>
+    <div style="max-width:1100px; margin:0 auto; padding:14px 16px; font-size:12px; color:#94a3b8;">
+      © 2025 koyo-mobile. All rights reserved.
+    </div>
+  </footer>
+</div>
